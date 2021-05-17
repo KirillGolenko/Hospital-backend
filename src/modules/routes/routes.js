@@ -18,8 +18,5 @@ router.get('/all', allComplaints);
 router.post('/register', register);
 router.post('/login', login);
 router.post('/add', addComplaints);
-// router.patch('/updateTask', changeTaskInfo);
-// router.get('/infoTask', infoTask);
-// router.delete('/deleteTask', deleteTask);
 
 export default router;
