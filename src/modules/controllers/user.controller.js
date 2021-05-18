@@ -29,12 +29,12 @@ export const login = async (req, res, next) => {
 					if (resultPass) {
 						res.send({ token: createHash(login) });
 					} else {
-						res.status(401).json({ error: 'Указанный пароль не верный' });
+						res.status(401).send('Указанный пароль не верный');
 					}
 				});
 			})
 			.catch(err => {
-				res.status(404).json({ error: 'Данный пользователь не найден' });
+				res.status(404).send('Данный пользователь не найден');
 			});
 	} else {
 		res.status(422).send('Error! Params not correct');
